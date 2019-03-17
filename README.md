@@ -68,8 +68,8 @@ You need the following to work on the project:
 |------------|---------|---------|
 | The program should displays the sign-up form first | credentials of the user | A user is created |
 | The program authenticates the user first before anything else  | One is required to login/signup | Redirected to log-in again for proper authentication |
-|The program should direct the user to their timeline page when logged in | Login as a user | Redirected to the timeline page with photos posted by other users |
-|The program should have a rate it button | Click on the rate it button | you are prompted to rate in various categories|
+|The program should direct the user to their timeline page when logged in | Login as a user | Redirected to the timeline page with sites posted by other users |
+|The program should have a rate it button | Click on the rate it button to rate | The results to how you did the rating|
 |The program should have a comment section on a site | Write on the comment section | The comment will appear on the submitted site| 
 
 ## Link to Live Website
