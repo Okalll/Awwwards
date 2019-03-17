@@ -1,12 +1,12 @@
 # *AWWWARDS*
 *BY OKALL VIVIAN*
 
-## *DESCRIPTION*
+### *DESCRIPTION*
 
 This is a simple application where one can submit,rate and look at people's sites.
 
 
-## *USER STORIES*
+### *USER STORIES*
 Through this application a user is able to:
 
 1. View posted projects and their details
@@ -27,7 +27,7 @@ Through this application a user is able to:
 6. View my profile page
 
 
-## *SETUO/INSTALLATION REQUIREMENTS*
+### *SETUP/INSTALLATION REQUIREMENTS*
 To start using this project use the following commands:
 
 * `git clone https://github.com/Okalll/Awwwwards.git`
@@ -47,7 +47,7 @@ To run this program
 * access the application on this localhost address `http://127.0.0.1:8000`
 
 
-## *PREREQUISITES*
+### *PREREQUISITES*
 
 You need the following to work on the project:
 
@@ -62,7 +62,7 @@ You need the following to work on the project:
 `-A text  Editor`
 
 
-## *BEHAVIOUR DRIVEN DEVELOPMENT*
+### *BEHAVIOUR DRIVEN DEVELOPMENT*
 
 |  Behaviour |  Input  |  Output |
 |------------|---------|---------|
@@ -72,11 +72,11 @@ You need the following to work on the project:
 |The program should have a rate it button | Click on the rate it button to rate | The results to how you did the rating|
 |The program should have a comment section on a site | Write on the comment section | The comment will appear on the submitted site| 
 
-## *LINK TO LIVE WEBSITE*
+### *LINK TO LIVE WEBSITE*
 
 
 
-## *TECHNOLOGIES USED*
+### *TECHNOLOGIES USED*
 - Python 3.6
 - HTML
 - Bootstrap 4
@@ -84,7 +84,7 @@ You need the following to work on the project:
 - Heroku
 - Postgresql
 
-## *LICENSE*
+### *LICENSE*
 MIT License
 
 Copyright (c) 2018 Okall Vivian
