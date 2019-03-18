@@ -1,12 +1,12 @@
-# AWWWARDS
+# *AWWWARDS*
 *BY OKALL VIVIAN*
 
-## Description
+### *DESCRIPTION*
 
 This is a simple application where one can submit,rate and look at people's sites.
 
 
-## User Stories
+### *USER STORIES*
 Through this application a user is able to:
 
 1. View posted projects and their details
@@ -27,7 +27,7 @@ Through this application a user is able to:
 6. View my profile page
 
 
-## Setup/Installation Requirements
+### *SETUP/INSTALLATION REQUIREMENTS*
 To start using this project use the following commands:
 
 * `git clone https://github.com/Okalll/Awwwwards.git`
@@ -47,7 +47,7 @@ To run this program
 * access the application on this localhost address `http://127.0.0.1:8000`
 
 
-## Prerequisites
+### *PREREQUISITES*
 
 You need the following to work on the project:
 
@@ -62,21 +62,21 @@ You need the following to work on the project:
 `-A text  Editor`
 
 
-##Behaviour Driven Development
+### *BEHAVIOUR DRIVEN DEVELOPMENT*
 
 |  Behaviour |  Input  |  Output |
 |------------|---------|---------|
 | The program should displays the sign-up form first | credentials of the user | A user is created |
 | The program authenticates the user first before anything else  | One is required to login/signup | Redirected to log-in again for proper authentication |
-|The program should direct the user to their timeline page when logged in | Login as a user | Redirected to the timeline page with photos posted by other users |
-|The program should have a rate it button | Click on the rate it button | you are prompted to rate in various categories|
+|The program should direct the user to their timeline page when logged in | Login as a user | Redirected to the timeline page with sites posted by other users |
+|The program should have a rate it button | Click on the rate it button to rate | The results to how you did the rating|
 |The program should have a comment section on a site | Write on the comment section | The comment will appear on the submitted site| 
 
-## Link to Live Website
+### *LINK TO LIVE WEBSITE*
 
 
 
-## Technologies used
+### *TECHNOLOGIES USED*
 - Python 3.6
 - HTML
 - Bootstrap 4
@@ -84,7 +84,7 @@ You need the following to work on the project:
 - Heroku
 - Postgresql
 
-## License
+### *LICENSE*
 MIT License
 
 Copyright (c) 2018 Okall Vivian
