@@ -16,3 +16,13 @@ class SignupForm(UserCreationForm):
     class Meta:
         model = User
         fields = ('username', 'email', 'password1', 'password2')
+
+class ProjectForm(forms.ModelForm):
+    class Meta:
+        model = Projects
+        exclude = ['poster']
+
+# class VoteForm(forms.ModelForm):
+#    class Meta:
+#        model = Projects
+#        fields = ('design','usability','content')
