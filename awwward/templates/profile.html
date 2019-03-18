@@ -1,6 +1,6 @@
-{% extends 'base.html'%} {% load staticfiles %} {% load bootstrap3 %} {{form.media}}
+{% load staticfiles %} {% load bootstrap3 %} {{form.media}}
 ​
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> {% block content %} {{ block.super }}
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> {% block content %} 
 ​
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -86,12 +86,12 @@
 
 
   {% else %}
-  <H1 align="center">You have no sites yet</H1>
+  <H1>You have no sites to view</H1>
   {% endif %}
 
   {% else %}
   ​
-  <a class='btn btn-default' href="/accounts/login">Login</a>
+  <a class='btn btn-default' href="/login">Login</a>
   ​
   ​
   {% endif %} {% endblock %}
