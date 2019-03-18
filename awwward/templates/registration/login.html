@@ -15,7 +15,7 @@
 
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="text-center" style="font-family: 'Oleo Script', cursive;">AWWWARDS</h3>
+          <h3 class="text-center" style="font-family: 'Oleo Script', cursive;">Instagram</h3>
         </div>
         <div class="panel-body">
           {% if form.errors %}
@@ -25,7 +25,7 @@
             {% csrf_token %}
             {% form form=form %}{% endform %}
             <div class="text-center">
-              <button type="submit" name="_submit" class="btn">Login</button>
+              <button type="submit" name="_submit" class="btn"><a href="home">Login</a></button>
             </div>
             <div class="section">
               <p class="forgot">Don't have an account? <a href="/signup">Sign-Up</a></p>
