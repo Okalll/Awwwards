@@ -27,20 +27,13 @@ class Projects(models.Model):
     description = models.TextField(null=True)
     link = models.URLField()
     poster = models.ForeignKey(User, null=True,on_delete=models.CASCADE)
-    # design = models.IntegerField(choices=list(zip(range(0, 11), range(0, 11))), default=0)
-    # usability = models.IntegerField(choices=list(zip(range(0, 11), range(0, 11))), default=0)
-    # content = models.IntegerField(choices=list(zip(range(0, 11), range(0, 11))), default=0)
-    # vote_submissions = models.IntegerField(default=0)
-    objects = models.Manager()
 
     def __str__(self):
         return self.name
 
-    def save_project(self):
+    def save_projects(self):
         self.save()
 
-    def delete_project(self):
+    def delete_projects(self):
         self.delete()
-
-    class Meta:
-        ordering = ["-id"]
+ 
