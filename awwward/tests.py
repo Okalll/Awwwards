@@ -1,10 +1,10 @@
 from django.test import TestCase
-from .models import Profile
+from .models import Profile,Projects
 from django.contrib.auth.models import User
 
 
 # Create your tests here.
-class ProfileTestCases(self):
+class ProfileTestCases(TestCase):
     """
     This will test the profiles
     """
@@ -38,3 +38,17 @@ class ProfileTestCases(self):
         """
         users = Profile.save_user("hey")
         self.assertTrue(len(users) == 1)
+class projectTestClass(TestCase):
+
+    def test_is_instance(self):
+        self.assertTrue(isinstance(self.project,Projects))
+
+    def test_save_method(self):
+        """
+        function that tests whether an image is saved to database
+        """
+        projects = Projects.objects.all()
+        self.save_project()
+    
+        
+        
