@@ -1,11 +1,11 @@
 
-{% load static %} {{block.super}} {{form.media}} 
-
-
+{% load static %} {{block.super}} {{form.media}} {% load ratings %}
+<link rel="stylesheet" href="{% static 'star-ratings/css/star-ratings.css' %}">
+<script type="text/javascript" src="{% static 'star-ratings/js/dist/star-ratings.min.js' %}"></script>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+<!-- Include the above in your HEAD tag -->
 
  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
@@ -20,16 +20,14 @@
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+                <input class="w3-input w3-animate-input w3-center" type="text" style="width:30%">
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/signup">Logout</a>
+                        <a class="nav-link" href="/logout">Logout</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/upload">Submit site</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="accounts/profile">Profile</a>
+                        <a class="nav-link" href="{% url 'profile' %}">Profile</a>
                     </li>
 
                 </ul>
@@ -56,45 +54,22 @@
     <section id="photos">
         <h1 class="mb-5 text-center">FEATURED SITES</h1>
         <div class="container">
+       
             <div class="row">
-        
+                 {% for projects in projectss %}
                 <div class="col-lg-4 col-sm-6 portfolio-item">
 
-                    <img class="card-img-top" src="https://speckyboy.com/wp-content/uploads/2011/10/slidersinweb6.jpg" alt="">
-                    
-                    <a href="/project"><h2>Rate and Review</h2></a>
+                    <img class="card-img-top" src="{{projects.image.url}}" alt="">
+                     <a href="{% url 'project' project_id=projects.id %}"><h2>View</h2></a>
 
+                   <div class = "box-content">
+                        <h3 class = "name">{{projects.name}}</h3>
+                        {% ratings projects %}
+                   </div>
+                 
                 </div>
-                <div class="col-lg-4 col-sm-6 portfolio-item">
-
-                    <img class="card-img-top" src="https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/uploads/2010/01/HotelWebsite16.jpg" alt="">
-                    <a href="#" data-featherlight="https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/uploads/2010/01/HotelWebsite16.jpg"><h2>Rate and Review</h2></a>
-
-                </div>
-                <div class="col-lg-4 col-sm-6 portfolio-item">
-
-                    <img class="card-img-top" src="https://vanillawebdesigns.com.au/wp-content/uploads/2017/01/wine-treasures-screen.jpg" alt="">
-                    <a href="#" data-featherlight="https://vanillawebdesigns.com.au/wp-content/uploads/2017/01/wine-treasures-screen.jpg"><h2>Rate and Review</h2></a>
-
-                </div>
-                <div class="col-lg-4 col-sm-6 portfolio-item">
-
-                    <img class="card-img-top" src="https://ww.logoinn.com/design-sample/website-design/JasonOng-Entertainment-Website-Design-Big.png" alt="">
-                    <a href="#" data-featherlight="https://ww.logoinn.com/design-sample/website-design/JasonOng-Entertainment-Website-Design-Big.png"><h2>Rate and Review</h2></a>
-
-                </div>
-                <div class="col-lg-4 col-sm-6 portfolio-item">
-
-                    <img class="card-img-top" src="https://s.tmimgcdn.com/scr/51500/free-website-template-real-estate-website-template_51575-big.jpg?width=768&height=476" alt="">
-                    <a href="#" data-featherlight="https://s.tmimgcdn.com/scr/51500/free-website-template-real-estate-website-template_51575-big.jpg?width=768&height=476"><h2>Rate and Review</h2></a>
-
-                </div>
-                <div class="col-lg-4 col-sm-6 portfolio-item">
-
-                    <img class="card-img-top" src="https://usabilla.com/blog/wp-content/uploads/Screen-shot-2013-04-04-at-11.26.jpg" alt="">
-                    <a href="#" data-featherlight="https://usabilla.com/blog/wp-content/uploads/Screen-shot-2013-04-04-at-11.26.jpg"><h2>Rate and Review</h2></a>
-
-                </div>
+                 {% endfor %} 
+                           
 
             </div>
         </div>
@@ -247,7 +222,7 @@ header.masthead {
     position: relative;
     background-color: #343a40;
     height: 100vh;
-    background: url(https://cdn.dribbble.com/users/19894/screenshots/888324/untitled-2.jpg) no-repeat fixed center center;
+    background: url(https://udemy-images.udemy.com/course/750x422/1121676_a48b_3.jpg) no-repeat fixed center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

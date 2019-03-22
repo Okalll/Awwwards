@@ -2,6 +2,7 @@
 ​
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> {% block content %} 
 ​
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -10,13 +11,9 @@
 
   <div class="row">
     <div class="col-md-4">
-      {% if user.profile.pro_photo %}
+      {% if profile.pro_photo.url %}
       <br><br><br>
       <img src="{{user.profile.pro_photo.url}}" alt="Avatar" class="img-responsive" style="border-radius:100%; height:250px; width: 250px;">
-      {% else %}
-      <img src="{{user.profile.pro_photo}}" alt="Avatar" class="img-responsive" style="border-radius:100%; height:250px; width: 250px;">
-
-      {% comment %} <img src="https://mbtskoudsalg.com/images/user-avatar-png-1.png" alt="Avatar" class="img-responsive" style="border-radius:70%; height:170px;"> {% endcomment %}
       {% endif %}
     </div>
 
@@ -95,3 +92,10 @@
   ​
   ​
   {% endif %} {% endblock %}
+
+  <style>
+body {
+    font-family: 'Indie Flower', cursive;
+    font-size: 100%;
+}
+  </style>
