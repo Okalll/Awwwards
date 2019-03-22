@@ -13,12 +13,8 @@ class ProfileTestCases(TestCase):
         """
         This will add a new profile before each test
         """
-        self.new_user = User(username="Hey")
+        self.new_user = User(username="Me")
         self.new_user.save()
-
-    def tearDown(self):
-        User.objects.all().delete()
-        Profile.objects.all().delete()
 
     def test_is_instance(self):
         """
