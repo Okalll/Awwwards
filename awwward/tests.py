@@ -26,19 +26,7 @@ class ProfileTestCases(TestCase):
         """
         self.assertTrue(isinstance(self.new_user.profile, Profile))
 
-    def test_init(self):
-        """
-        This will test whether the new profile is created coreectly
-        """
-        self.assertTrue(self.new_user.profile.bio == "Hi!")
-
-    def test_save_users(self):
-        """
-        This will test whether the search function works
-        """
-        users = Profile.save_user("hey")
-        self.assertTrue(len(users) == 1)
-class projectTestClass(TestCase):
+  class projectTestClass(TestCase):
 
     def test_is_instance(self):
         self.assertTrue(isinstance(self.project,Projects))
