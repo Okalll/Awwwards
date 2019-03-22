@@ -68,9 +68,12 @@ You need the following to work on the project:
 |------------|---------|---------|
 | The program should displays the sign-up form first | credentials of the user | A user is created |
 | The program authenticates the user first before anything else  | One is required to login/signup | Redirected to log-in again for proper authentication |
-|The program should direct the user to their timeline page when logged in | Login as a user | Redirected to the timeline page with sites posted by other users |
+|The program should direct the user to the home page when logged in | Login as a user | Redirected to the home page with sites posted by other users |
 |The program should have a rate it button | Click on the rate it button to rate | The results to how you did the rating|
-|The program should have a comment section on a site | Write on the comment section | The comment will appear on the submitted site| 
+| View Home | Click Home | Loads the home page with projects displayed |
+| View User Profile  | view profile  | Profile page with users information |
+| Visit actual site | Project url link | Actual project|
+| Rate other projects | Ratings based on number | Result of the average rate|
 
 ### *LINK TO LIVE WEBSITE*
 
